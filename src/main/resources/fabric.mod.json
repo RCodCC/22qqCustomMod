@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "crystalpvpcustommod",
+  "version": "${version}",
+  "name": "22qq's Crystal PvP Custom Mod",
+  "description": "Utilities mod for Crystal PvP",
+  "authors": [
+    "kisr & 22qq"
+  ],
+  "license": "MIT",
+  "icon": "assets/modid/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "me.twotwoqq.cmod.Main"
+    ]
+  },
+  "mixins": [
+    "modid.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "*",
+    "java": ">=16"
+  }
+}
