@@ -3,8 +3,12 @@
 * PopCounter (Counts Pops, Credit to Kisrr)
 * NoHurtCam
 * NoFireOverlay
+* Crystal Optimizer
+* NameTag Visibility
 
 # Controls (you can change it)
 * F8 - Toggles popcounter
 * F9 - Resets popcounter
-* U - NoHurtCam
+* 8  - NoHurtCam
+* 9  - NameTag Visibility
+* 0  - Crystal Optimizer

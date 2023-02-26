@@ -17,6 +17,8 @@ public class Main implements ModInitializer {
     public static boolean playerpopsToggle = true;
     public static boolean playerpingToggle = true;
     public static boolean nhcToggle = true;
+    public static boolean ntToggle = true;
+    public static boolean coToggle = true;
     public static MinecraftClient MC = MinecraftClient.getInstance();
 
     @Override
@@ -33,9 +35,14 @@ public class Main implements ModInitializer {
         KeyBinding reset = KeyBindingHelper.registerKeyBinding(new KeyBinding("Reset PopCounter",
                 GLFW.GLFW_KEY_F8,
                 "22qq Mod"));
-
         KeyBinding nhc = KeyBindingHelper.registerKeyBinding(new KeyBinding("Toggle NoHurtCam",
                 GLFW.GLFW_KEY_8,
+                "22qq Mod"));
+        KeyBinding nt = KeyBindingHelper.registerKeyBinding(new KeyBinding("Toggle Name Visibility",
+                GLFW.GLFW_KEY_9,
+                "22qq Mod"));
+        KeyBinding co = KeyBindingHelper.registerKeyBinding(new KeyBinding("Toggle Name Visibility",
+                GLFW.GLFW_KEY_0,
                 "22qq Mod"));
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
@@ -51,6 +58,12 @@ public class Main implements ModInitializer {
             } else if (pingtoggle.wasPressed()) {
                 playerpingToggle = !playerpingToggle;
                 client.player.sendMessage(Text.of("§9[22qq's Custom Mod] §rToggled Ping to §e" + nhcToggle), false);
+            } else if (nt.wasPressed()) {
+                ntToggle = !ntToggle;
+                client.player.sendMessage(Text.of("§9[22qq's Custom Mod] §rToggled Name Visibility to §e" + ntToggle), false);
+            } else if (nt.wasPressed()) {
+                ntToggle = !ntToggle;
+                client.player.sendMessage(Text.of("§9[22qq's Custom Mod] §rToggled Crystal Optimizer to §e" + coToggle), false);
             }
         });
 
